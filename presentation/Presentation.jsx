@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import createTheme from 'spectacle/lib/themes/default';
+import { Row, Col } from 'reactstrap';
 import {
   Deck,
   Heading,
@@ -8,9 +9,11 @@ import {
   Slide,
   Text,
   Image,
+  Link
 } from 'spectacle';
 
 import formImage from '../assets/emoji_registration.png';
+import uncontrolledInputImage from '../assets/uncontrolled_input.png';
 
 const theme = createTheme({
   textColor: '#595959',
@@ -35,7 +38,7 @@ export default class Presentation extends Component {
           <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={20}>
             Arkadiusz Machalica web-developer @ selleo
             <br />
-            <a href="https://www.linkedin.com/in/arkadiusz-machalica">linkedin.com/in/arkadiusz-machalica</a>
+            <Link href="https://www.linkedin.com/in/arkadiusz-machalica">linkedin.com/in/arkadiusz-machalica</Link>
           </Text>
         </Slide>
 
@@ -46,15 +49,45 @@ export default class Presentation extends Component {
 
         <Slide transition={['slide']} bgColor="bgColor">
           <Heading size={6} textColor="textColor" caps>Pure React with uncontrolled inputs</Heading>
-          <List>
-            <ListItem>What are uncontrolled inputs</ListItem>
-            <ListItem>Example</ListItem>
-            <ListItem>Upsides</ListItem>
-            no need to keep data in state and handle their update
-            <ListItem>Downsides</ListItem>
-            have to handle validation manually by yourself by binding it on form submit and field change
-            hard to control form values when they need to programmatically be changed
-          </List>
+          <Row>
+            <Col md="6">
+              <Text textSize={30} textColor="textColor" bold>Example</Text>
+              <Image src={uncontrolledInputImage} height="auto" />
+              <Link
+                textSize={18}
+                href="https://code.lengstorf.com/get-form-values-as-json/"
+              >
+                code.lengstorf.com/get-form-values-as-json/
+              </Link>
+            </Col>
+            <Col md="6">
+              <List>
+                <ListItem textSize={30} bold>Upsides</ListItem>
+                <List>
+                  <ListItem textSize={20} bold={false}>
+                    data stored in DOM
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                    Vanilla JS approach
+                  </ListItem>
+                </List>
+
+                <ListItem textSize={30} bold>Downsides
+                  <List>
+                    <ListItem textSize={20} bold={false}>
+                      not suited real applications
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                      manual validation handling
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                      clunky controll over form values
+                    </ListItem>
+                  </List>
+                </ListItem>
+              </List>
+            </Col>
+          </Row>
         </Slide>
 
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
