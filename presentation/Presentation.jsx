@@ -65,7 +65,7 @@ export default class Presentation extends Component {
                 <ListItem textSize={30} bold>Upsides</ListItem>
                 <List>
                   <ListItem textSize={20} bold={false}>
-                    data stored in DOM
+                    Data stored in DOM
                   </ListItem>
                   <ListItem textSize={20} bold={false}>
                     Vanilla JS approach
@@ -75,13 +75,16 @@ export default class Presentation extends Component {
                 <ListItem textSize={30} bold>Downsides
                   <List>
                     <ListItem textSize={20} bold={false}>
-                      not suited real applications
+                      Not suited real applications
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
-                      manual validation handling
+                      Manual validation handling
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
-                      clunky controll over form values
+                      Clunky control over form values
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                      Clunky debugging (React DevTools are not showing them)
                     </ListItem>
                   </List>
                 </ListItem>
@@ -92,52 +95,195 @@ export default class Presentation extends Component {
 
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>Pure React with controlled inputs</Heading>
-          <List>
-            <ListItem>What are controlled inputs</ListItem>
-            <ListItem>Example</ListItem>
-            <ListItem>Upsides</ListItem>
-            <ListItem>Downsides</ListItem>
-          </List>
+          <Row>
+            <Col md="6">
+              <Text textSize={30} textColor="textColor" bold>Example</Text>
+              <Image src={''} height="auto" />
+            </Col>
+            <Col md="6">
+              <List>
+                <ListItem textSize={30} bold>Upsides</ListItem>
+                <List>
+                  <ListItem textSize={20} bold={false}>
+                    React way of doing forms
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                    Easy control by setState
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                    Easy debugging with React Devtools
+                  </ListItem>
+                </List>
+
+                <ListItem textSize={30} bold>Downsides
+                  <List>
+                    <ListItem textSize={20} bold={false}>
+                      Manual validation handling
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                      Hard to handle big/complex forms
+                    </ListItem>
+                  </List>
+                </ListItem>
+              </List>
+            </Col>
+          </Row>
         </Slide>
 
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>React Form</Heading>
-          <List>
-            <ListItem>Package solution https://github.com/react-tools/react-form</ListItem>
-            <ListItem>Example</ListItem>
-            <ListItem>Upsides</ListItem>
-            <ListItem>Downsides</ListItem>
-          </List>
+          <Row>
+            <Col md="6">
+              <Text textSize={30} textColor="textColor" bold>Example</Text>
+              <Image src={''} height="auto" />
+              <Link
+                textSize={18}
+                href="https://github.com/react-tools/react-form"
+              >
+                github.com/react-tools/react-form
+              </Link>
+            </Col>
+            <Col md="6">
+              <List>
+                <ListItem textSize={30} bold>Upsides</ListItem>
+                <List>
+                  <ListItem textSize={20} bold={false}>
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                  </ListItem>
+                </List>
+
+                <ListItem textSize={30} bold>Downsides
+                  <List>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                  </List>
+                </ListItem>
+              </List>
+            </Col>
+          </Row>
         </Slide>
 
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>Redux Form</Heading>
-          <List>
-            <ListItem>Package solution https://github.com/erikras/redux-form</ListItem>
-            <ListItem>Example</ListItem>
-            <ListItem>Upsides</ListItem>
-            <ListItem>Downsides</ListItem>
-          </List>
+          <Row>
+            <Col md="6">
+              <Text textSize={30} textColor="textColor" bold>Example</Text>
+              <Image src={''} height="auto" />
+              <Link
+                textSize={18}
+                href="https://github.com/erikras/redux-form"
+              >
+                github.com/erikras/redux-form
+              </Link>
+            </Col>
+            <Col md="6">
+              <List>
+                <ListItem textSize={30} bold>Upsides</ListItem>
+                <List>
+                  <ListItem textSize={20} bold={false}>
+                    Widely used
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                    Allow storing data between routes
+                  </ListItem>
+                </List>
+
+                <ListItem textSize={30} bold>Downsides
+                  <List>
+                    <ListItem textSize={20} bold={false}>
+                      Performance issues
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                  </List>
+                </ListItem>
+              </List>
+            </Col>
+          </Row>
         </Slide>
 
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>Formik</Heading>
-          <List>
-            <ListItem>Package solution https://github.com/jaredpalmer/formik</ListItem>
-            <ListItem>Example</ListItem>
-            <ListItem>Upsides</ListItem>
-            <ListItem>Downsides</ListItem>
-          </List>
+          <Row>
+            <Col md="6">
+              <Text textSize={30} textColor="textColor" bold>Example</Text>
+              <Image src={''} height="auto" />
+              <Link
+                textSize={18}
+                href="https://github.com/jaredpalmer/formik"
+              >
+                github.com/jaredpalmer/formik
+              </Link>
+            </Col>
+            <Col md="6">
+              <List>
+                <ListItem textSize={30} bold>Upsides</ListItem>
+                <List>
+                  <ListItem textSize={20} bold={false}>
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                  </ListItem>
+                </List>
+
+                <ListItem textSize={30} bold>Downsides
+                  <List>
+                    <ListItem textSize={20} bold={false}>
+                      Handles only flat forms
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                  </List>
+                </ListItem>
+              </List>
+            </Col>
+          </Row>
         </Slide>
 
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>React Final Form</Heading>
-          <List>
-            <ListItem>Package solution https://github.com/final-form/react-final-form</ListItem>
-            <ListItem>Example</ListItem>
-            <ListItem>Upsides</ListItem>
-            <ListItem>Downsides</ListItem>
-          </List>
+          <Row>
+            <Col md="6">
+              <Text textSize={30} textColor="textColor" bold>Example</Text>
+              <Image src={''} height="auto" />
+              <Link
+                textSize={18}
+                href="https://github.com/final-form/react-final-form"
+              >
+                github.com/final-form/react-final-form
+              </Link>
+            </Col>
+            <Col md="6">
+              <List>
+                <ListItem textSize={30} bold>Upsides</ListItem>
+                <List>
+                  <ListItem textSize={20} bold={false}>
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                  </ListItem>
+                </List>
+
+                <ListItem textSize={30} bold>Downsides
+                  <List>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                    </ListItem>
+                  </List>
+                </ListItem>
+              </List>
+            </Col>
+          </Row>
         </Slide>
       </Deck>
     );
