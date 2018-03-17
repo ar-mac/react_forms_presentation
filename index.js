@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Redbox from 'redbox-react';
+require('normalize.css');
 
 import Presentation from './presentation';
 

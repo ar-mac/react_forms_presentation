@@ -1,9 +1,7 @@
-// Import React
 import React, { Component } from 'react';
+import createTheme from 'spectacle/lib/themes/default';
 
-// Import Spectacle Core tags
 import {
-  BlockQuote,
   Cite,
   Deck,
   Heading,
@@ -14,19 +12,12 @@ import {
   Text,
 } from 'spectacle';
 
-// Import theme
-import createTheme from 'spectacle/lib/themes/default';
-
-// Require CSS
-require('normalize.css');
-// import city from '../assets/city.jpg';
-//          <Heading size={1} fit caps lineHeight={1} textColor="'secondary'>"
-
 const theme = createTheme({
-  primary: '#ffffff',
-  secondary: '#1F2022',
-  tertiary: '#03A9FC',
-  quarternary: '#CECECE',
+  textColor: '#595959',
+  primary: '#ecf0f1',
+  secondary: '#595959',
+  tertiary: '#595959',
+  quarternary: '#595959',
   bgColor: '#ecf0f1',
 }, {
   primary: 'Montserrat',
@@ -38,38 +29,68 @@ export default class Presentation extends Component {
     return (
       <Deck transition={['slide']} transitionDuration={500} theme={theme} progress="number">
         <Slide transition={['slide']} bgColor="bgColor">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+          <Heading size={1} fit caps lineHeight={1} textColor="textColor">
             Multiple approaches to creating forms
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" lineHeight={1} textSize={20} bold>
+          <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={20} bold>
             Arkadiusz Machalica web-developer @ selleo
             <br />
             <a href="https://www.linkedin.com/in/arkadiusz-machalica">linkedin.com/in/arkadiusz-machalica</a>
           </Text>
         </Slide>
         <Slide transition={['slide']} bgColor="bgColor">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide>
-        <Slide transition={['slide']} bgColor="bgColor" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
+          <Heading size={6} textColor="textColor" caps>Pure React with uncontrolled inputs</Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <ListItem>What are uncontrolled inputs</ListItem>
+            <ListItem>Example</ListItem>
+            <ListItem>Upsides</ListItem>
+            <ListItem>Downsides</ListItem>
           </List>
         </Slide>
-        <Slide transition={['slide']} bgColor="bgColor" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
+          <Heading size={6} textColor="textColor" caps>Pure React with controlled inputs</Heading>
+          <List>
+            <ListItem>What are controlled inputs</ListItem>
+            <ListItem>Example</ListItem>
+            <ListItem>Upsides</ListItem>
+            <ListItem>Downsides</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
+          <Heading size={6} textColor="textColor" caps>React Form</Heading>
+          <List>
+            <ListItem>Package solution https://github.com/react-tools/react-form</ListItem>
+            <ListItem>Example</ListItem>
+            <ListItem>Upsides</ListItem>
+            <ListItem>Downsides</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
+          <Heading size={6} textColor="textColor" caps>Redux Form</Heading>
+          <List>
+            <ListItem>Package solution https://github.com/erikras/redux-form</ListItem>
+            <ListItem>Example</ListItem>
+            <ListItem>Upsides</ListItem>
+            <ListItem>Downsides</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
+          <Heading size={6} textColor="textColor" caps>Formik</Heading>
+          <List>
+            <ListItem>Package solution https://github.com/jaredpalmer/formik</ListItem>
+            <ListItem>Example</ListItem>
+            <ListItem>Upsides</ListItem>
+            <ListItem>Downsides</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
+          <Heading size={6} textColor="textColor" caps>React Final Form</Heading>
+          <List>
+            <ListItem>Package solution https://github.com/final-form/react-final-form</ListItem>
+            <ListItem>Example</ListItem>
+            <ListItem>Upsides</ListItem>
+            <ListItem>Downsides</ListItem>
+          </List>
         </Slide>
       </Deck>
     );
