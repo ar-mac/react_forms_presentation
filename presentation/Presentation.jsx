@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import createTheme from 'spectacle/lib/themes/default';
-
 import {
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
   Text,
+  Image,
 } from 'spectacle';
+
+import formImage from '../assets/emoji_registration.png';
 
 const theme = createTheme({
   textColor: '#595959',
@@ -29,24 +29,34 @@ export default class Presentation extends Component {
     return (
       <Deck transition={['slide']} transitionDuration={500} theme={theme} progress="number">
         <Slide transition={['slide']} bgColor="bgColor">
-          <Heading size={1} fit caps lineHeight={1} textColor="textColor">
-            Multiple approaches to creating forms
+          <Heading size={3} caps lineHeight={1} textColor="textColor">
+            Creating forms <br />in React
           </Heading>
-          <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={20} bold>
+          <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={20}>
             Arkadiusz Machalica web-developer @ selleo
             <br />
             <a href="https://www.linkedin.com/in/arkadiusz-machalica">linkedin.com/in/arkadiusz-machalica</a>
           </Text>
         </Slide>
+
+        <Slide transition={['slide']} bgColor="bgColor" notes="Example form">
+          <Heading size={6} textColor="textColor" caps>Example form</Heading>
+          <Image src={formImage} height="540px" />
+        </Slide>
+
         <Slide transition={['slide']} bgColor="bgColor">
           <Heading size={6} textColor="textColor" caps>Pure React with uncontrolled inputs</Heading>
           <List>
             <ListItem>What are uncontrolled inputs</ListItem>
             <ListItem>Example</ListItem>
             <ListItem>Upsides</ListItem>
+            no need to keep data in state and handle their update
             <ListItem>Downsides</ListItem>
+            have to handle validation manually by yourself by binding it on form submit and field change
+            hard to control form values when they need to programmatically be changed
           </List>
         </Slide>
+
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>Pure React with controlled inputs</Heading>
           <List>
@@ -56,6 +66,7 @@ export default class Presentation extends Component {
             <ListItem>Downsides</ListItem>
           </List>
         </Slide>
+
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>React Form</Heading>
           <List>
@@ -65,6 +76,7 @@ export default class Presentation extends Component {
             <ListItem>Downsides</ListItem>
           </List>
         </Slide>
+
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>Redux Form</Heading>
           <List>
@@ -74,6 +86,7 @@ export default class Presentation extends Component {
             <ListItem>Downsides</ListItem>
           </List>
         </Slide>
+
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>Formik</Heading>
           <List>
@@ -83,6 +96,7 @@ export default class Presentation extends Component {
             <ListItem>Downsides</ListItem>
           </List>
         </Slide>
+
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
           <Heading size={6} textColor="textColor" caps>React Final Form</Heading>
           <List>
