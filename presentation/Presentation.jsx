@@ -26,6 +26,26 @@ const theme = createTheme({
   primary: 'Montserrat',
   secondary: 'Helvetica',
 });
+/*
+*  simplest case is to use uncontrolled inputs which is closest to VanillaJS
+*  You can achieve some nice features when utilizing HTML5
+*
+*  Drawbacks: data structure is not obvious, vanilla js debugging,
+*  storing data between routes, no helpers for dirty/touched
+*
+*  First two can be solved by controlled inputs, so you store form data in state and pass value to the proper inputs
+*  You have to create your custom buggy solution for tracking field state (d/t), or store form data
+*
+*  In that case we have wide array of packages to use
+*
+*  React Form - total solution for form handling, do not require manual setting field data in state,
+*  provides info about field state, extensible, not used all that much
+*
+*  Formik - simple api, only flat forms
+*
+*  Redux Form - allow persisting data between routes, performance issues on bigger applications
+*  React Final Form - total solution for form handling
+* */
 
 export default class Presentation extends Component {
   render() {
