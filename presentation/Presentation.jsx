@@ -43,21 +43,50 @@ export default class Presentation extends Component {
         </Slide>
 
         <Slide transition={['slide']} bgColor="bgColor" notes="Example form">
-          <Heading size={6} textColor="textColor" caps>Example form</Heading>
-          <Image src={formImage} height="540px" />
+          <Heading size={6} textColor="textColor" caps>Agenda</Heading>
+          <Row>
+            <Col md="6">
+              <Image src={formImage} height="540px" />
+            </Col>
+            <Col md="6">
+              <List>
+                <ListItem textSize={30} bold>Uncontrolled inputs</ListItem>
+                <ListItem textSize={30} bold>Controlled inputs</ListItem>
+                <ListItem textSize={30} bold>React Form</ListItem>
+                <ListItem textSize={30} bold>Redux Form</ListItem>
+                <ListItem textSize={30} bold>Formik</ListItem>
+                <ListItem textSize={30} bold>React Final Form</ListItem>
+              </List>
+            </Col>
+          </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="bgColor">
-          <Heading size={6} textColor="textColor" caps>Pure React with uncontrolled inputs</Heading>
+        <Slide
+          transition={['slide']}
+          bgColor="bgColor"
+          notes="
+            Uncontrolled inputs hold form data only in DOM elements values.
+            You have to get them from form element, or from each specific field.
+            It's jQuery'ish solution
+            For debugging you have to use form.elements in console
+          "
+        >
+          <Heading size={6} textColor="textColor" caps>React with uncontrolled inputs</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
-              <Image src={uncontrolledInputImage} height="auto" />
+              <Image src={''} height="auto" />
               <Link
                 textSize={18}
-                href="https://code.lengstorf.com/get-form-values-as-json/"
+                href="https://css-tricks.com/react-forms-using-refs"
               >
-                code.lengstorf.com/get-form-values-as-json/
+                css-tricks.com/react-forms-using-refs
+              </Link>
+              <Link
+                textSize={18}
+                href="https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f"
+              >
+                medium.com/@everdimension
               </Link>
             </Col>
             <Col md="6">
@@ -65,26 +94,29 @@ export default class Presentation extends Component {
                 <ListItem textSize={30} bold>Upsides</ListItem>
                 <List>
                   <ListItem textSize={20} bold={false}>
-                    Data stored in DOM
+                    Lightweight
                   </ListItem>
                   <ListItem textSize={20} bold={false}>
-                    Vanilla JS approach
+                    Allow integration with non React code
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                    Data is stored in DOM
                   </ListItem>
                 </List>
 
                 <ListItem textSize={30} bold>Downsides
                   <List>
                     <ListItem textSize={20} bold={false}>
-                      Not suited real applications
-                    </ListItem>
-                    <ListItem textSize={20} bold={false}>
-                      Manual validation handling
-                    </ListItem>
-                    <ListItem textSize={20} bold={false}>
-                      Clunky control over form values
+                      Form data structure is not obvious
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
                       Clunky debugging (React DevTools are not showing them)
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                      No helpers for detecting field state (dirty/touched)
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                      No standard components for fields
                     </ListItem>
                   </List>
                 </ListItem>
@@ -94,7 +126,7 @@ export default class Presentation extends Component {
         </Slide>
 
         <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
-          <Heading size={6} textColor="textColor" caps>Pure React with controlled inputs</Heading>
+          <Heading size={6} textColor="textColor" caps>React with controlled inputs</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
@@ -105,10 +137,7 @@ export default class Presentation extends Component {
                 <ListItem textSize={30} bold>Upsides</ListItem>
                 <List>
                   <ListItem textSize={20} bold={false}>
-                    React way of doing forms
-                  </ListItem>
-                  <ListItem textSize={20} bold={false}>
-                    Easy control by setState
+                    Form structure is visible in component state
                   </ListItem>
                   <ListItem textSize={20} bold={false}>
                     Easy debugging with React Devtools
@@ -118,10 +147,13 @@ export default class Presentation extends Component {
                 <ListItem textSize={30} bold>Downsides
                   <List>
                     <ListItem textSize={20} bold={false}>
-                      Manual validation handling
+                      Setting form data require handlers
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
-                      Hard to handle big/complex forms
+                      No helpers for detecting field state (dirty/touched)
+                    </ListItem>
+                    <ListItem textSize={20} bold={false}>
+                      No standard components for fields
                     </ListItem>
                   </List>
                 </ListItem>
@@ -148,16 +180,23 @@ export default class Presentation extends Component {
                 <ListItem textSize={30} bold>Upsides</ListItem>
                 <List>
                   <ListItem textSize={20} bold={false}>
+                    Provides abstract components for fields
                   </ListItem>
                   <ListItem textSize={20} bold={false}>
+                    Has support for nested fields
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                    Rich API (field state, form lifecycle callbacks)
                   </ListItem>
                 </List>
 
                 <ListItem textSize={30} bold>Downsides
                   <List>
                     <ListItem textSize={20} bold={false}>
+                      Awkward syntax
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
+                      Not that popular
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
                     </ListItem>
@@ -190,6 +229,9 @@ export default class Presentation extends Component {
                   </ListItem>
                   <ListItem textSize={20} bold={false}>
                     Allow storing data between routes
+                  </ListItem>
+                  <ListItem textSize={20} bold={false}>
+                    Good documentation with examples
                   </ListItem>
                 </List>
 
@@ -266,6 +308,7 @@ export default class Presentation extends Component {
                 <ListItem textSize={30} bold>Upsides</ListItem>
                 <List>
                   <ListItem textSize={20} bold={false}>
+                    No dependencies
                   </ListItem>
                   <ListItem textSize={20} bold={false}>
                   </ListItem>
@@ -274,8 +317,10 @@ export default class Presentation extends Component {
                 <ListItem textSize={30} bold>Downsides
                   <List>
                     <ListItem textSize={20} bold={false}>
+                      Not enough traction yet
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
+                      Feature rich with good docs and examples
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
                     </ListItem>
