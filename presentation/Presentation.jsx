@@ -241,6 +241,7 @@ export default class Presentation extends Component {
                       Performance issues
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
+                      Package size
                     </ListItem>
                     <ListItem textSize={20} bold={false}>
                     </ListItem>
