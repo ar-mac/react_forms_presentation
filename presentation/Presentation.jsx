@@ -76,8 +76,9 @@ export default class Presentation extends Component {
             <Col md="6">
               <Text textSize={30} textColor="quarternary" textAlign="left">1. Challenges</Text>
               <List>
-                <ListItem textColor="tertiary" textSize={24} bold={false}>Form data and field state
-                  management</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>
+                  Form data and field state management
+                </ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Field and submit validations</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Dynamic fields</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Async select (search)</ListItem>
@@ -435,6 +436,72 @@ export default class Presentation extends Component {
               </List>
             </Col>
           </Row>
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          notes="
+
+          "
+        >
+          <Heading size={6} textColor="secondary" caps>4. Supporting Packages</Heading>
+          <Image src={images.supplyDrop} height="500px" />
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          textColor="textColor"
+          notes="
+            Lots of fields with typeahead support, async, chips
+          "
+        >
+          <Heading size={6} textColor="secondary" caps>React Bootstrap Typeahead</Heading>
+          <Image src={images.search} height="auto" />
+          <Link
+            textSize={18}
+            href="https://github.com/ericgio/react-bootstrap-typeahead"
+          >
+            github.com/ericgio/react-bootstrap-typeahead
+          </Link>
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          textColor="textColor"
+          notes="
+            Go-to validation solution
+          "
+        >
+          <Heading size={6} textColor="secondary" caps>Yup.js</Heading>
+          <Image src={images.yup} height="auto" />
+          <Link
+            textSize={18}
+            href="https://github.com/jquense/yup"
+          >
+            github.com/jquense/yup
+          </Link>
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          notes="
+          "
+        >
+          <Heading size={3} textColor="secondary" caps lineHeight={1}>
+            Creating forms <br />in React
+          </Heading>
+          <Heading size={5} textColor="tertiary" caps lineHeight={1}>
+            Thank you for your attention
+          </Heading>
+          <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={26}>
+            Arkadiusz Machalica web-developer @ Selleo
+            <br />
+            <Link href="https://www.linkedin.com/in/arkadiusz-machalica">linkedin.com/in/arkadiusz-machalica</Link>
+          </Text>
         </Slide>
       </Deck>
     );

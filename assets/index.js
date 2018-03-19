@@ -10,6 +10,8 @@ import controlledInput from './controlled.png';
 import catPackage from './catPackage.png';
 import reactForm from './reactForm.png';
 import reduxForm from './reduxForm.png';
+import supplyDrop from './supplyDrop.png';
+import yup from './yup.png';
 
 export {
   fieldMetadata,
@@ -24,4 +26,6 @@ export {
   catPackage,
   reactForm,
   reduxForm,
+  supplyDrop,
+  yup,
 };
