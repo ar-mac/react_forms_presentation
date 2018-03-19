@@ -65,11 +65,9 @@ export default class Presentation extends Component {
             <Col md="6">
               <Text textSize={30} textColor="quarternary" textAlign="left">1. Challenges</Text>
               <List>
-                <ListItem textColor="tertiary" textSize={24} bold={false}>Form data and field state
-                  management</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Form data and field state management</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Field and submit validations</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Dynamic fields</ListItem>
-                <ListItem textColor="tertiary" textSize={24} bold={false}>Related fields</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Async select (search)</ListItem>
               </List>
               <Text textSize={30} textColor="quarternary" textAlign="left">2. Solutions without dependencies</Text>
@@ -125,7 +123,6 @@ export default class Presentation extends Component {
             </Col>
             <Col md="6">
               <Image src={images.fieldValidation} />
-
             </Col>
           </Row>
         </Slide>
@@ -142,30 +139,32 @@ export default class Presentation extends Component {
         <Slide
           transition={['slide']}
           bgColor="primary"
-          notes="
-            Uncontrolled inputs hold form data only in DOM elements values.
-            You have to get them from form element, or from each specific field.
-            It's jQuery'ish solution
-            For debugging you have to use form.elements in console
-          "
+          notes=""
+        >
+          <Heading size={6} textColor="secondary" caps>Async select (search)</Heading>
+          <Image src={images.search} />
+          <Link href="http://ericgio.github.io/react-bootstrap-typeahead/">ericgio.github.io/react-bootstrap-typeahead</Link>
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          notes=""
+        >
+          <Heading size={6} textColor="secondary" caps>2. Solutions without dependencies</Heading>
+          <Image src={images.independent} height="500px" />
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          notes=""
         >
           <Heading size={6} textColor="secondary" caps>React with uncontrolled inputs</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
-              <Image src={''} height="auto" />
-              <Link
-                textSize={18}
-                href="https://css-tricks.com/react-forms-using-refs"
-              >
-                css-tricks.com/react-forms-using-refs
-              </Link>
-              <Link
-                textSize={18}
-                href="https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f"
-              >
-                medium.com/@everdimension
-              </Link>
+              <Image src={images.uncontrolledInput} height="auto" />
             </Col>
             <Col md="6">
               <List>
@@ -201,6 +200,19 @@ export default class Presentation extends Component {
               </List>
             </Col>
           </Row>
+          <Link
+            textSize={18}
+            href="https://css-tricks.com/react-forms-using-refs"
+          >
+            css-tricks.com/react-forms-using-refs
+          </Link>
+          <br />
+          <Link
+            textSize={18}
+            href="https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f"
+          >
+            medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
+          </Link>
         </Slide>
 
         <Slide transition={['slide']} bgColor="primary" textColor="textColor">
@@ -208,7 +220,7 @@ export default class Presentation extends Component {
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
-              <Image src={''} height="auto" />
+              <Image src={images.controlledInput} height="auto" />
             </Col>
             <Col md="6">
               <List>
