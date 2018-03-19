@@ -353,41 +353,6 @@ export default class Presentation extends Component {
           </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="primary" textColor="textColor">
-          <Heading size={6} textColor="secondary" caps>Formik</Heading>
-          <Row>
-            <Col md="6">
-              <Image src={''} height="auto" />
-              <Link
-                textSize={18}
-                href="https://github.com/jaredpalmer/formik"
-              >
-                github.com/jaredpalmer/formik
-              </Link>
-            </Col>
-            <Col md="6">
-              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
-              <List>
-                <ListItem textColor="tertiary" textSize={20} bold={false}>
-                </ListItem>
-                <ListItem textColor="tertiary" textSize={20} bold={false}>
-                </ListItem>
-              </List>
-
-              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
-              <List>
-                <ListItem textColor="tertiary" textSize={20} bold={false}>
-                  Handles only flat forms
-                </ListItem>
-                <ListItem textColor="tertiary" textSize={20} bold={false}>
-                </ListItem>
-                <ListItem textColor="tertiary" textSize={20} bold={false}>
-                </ListItem>
-              </List>
-            </Col>
-          </Row>
-        </Slide>
-
         <Slide
           transition={['slide']}
           bgColor="primary"
