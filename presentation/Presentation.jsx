@@ -48,24 +48,36 @@ export default class Presentation extends Component {
   render() {
     return (
       <Deck transition={['slide']} transitionDuration={500} theme={theme} progress="number">
-        <Slide transition={['slide']} bgColor="primary">
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          notes="
+            Hello! With these 3 easy tricks you will create any form in React in less than an hour!...
+            I am Arkadiusz Machalica webdev at Selleo
+          "
+        >
           <Heading size={3} textColor="secondary" caps lineHeight={1}>
             Creating forms <br />in React
           </Heading>
-          <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={20}>
+          <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={26}>
             Arkadiusz Machalica web-developer @ Selleo
             <br />
             <Link href="https://www.linkedin.com/in/arkadiusz-machalica">linkedin.com/in/arkadiusz-machalica</Link>
           </Text>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="primary" notes="Example form">
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          notes="and the reality is not that simple. Quite the opposite."
+        >
           <Heading size={6} textColor="secondary" caps>Agenda</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="quarternary" textAlign="left">1. Challenges</Text>
               <List>
-                <ListItem textColor="tertiary" textSize={24} bold={false}>Form data and field state management</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Form data and field state
+                  management</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Field and submit validations</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Dynamic fields</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Async select (search)</ListItem>
@@ -143,7 +155,8 @@ export default class Presentation extends Component {
         >
           <Heading size={6} textColor="secondary" caps>Async select (search)</Heading>
           <Image src={images.search} />
-          <Link href="http://ericgio.github.io/react-bootstrap-typeahead/">ericgio.github.io/react-bootstrap-typeahead</Link>
+          <Link
+            href="http://ericgio.github.io/react-bootstrap-typeahead/">ericgio.github.io/react-bootstrap-typeahead</Link>
         </Slide>
 
         <Slide
@@ -163,39 +176,36 @@ export default class Presentation extends Component {
           <Heading size={6} textColor="secondary" caps>React with uncontrolled inputs</Heading>
           <Row>
             <Col md="6">
-              <Text textSize={30} textColor="textColor" bold>Example</Text>
               <Image src={images.uncontrolledInput} height="auto" />
             </Col>
             <Col md="6">
+              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
               <List>
-                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
-                <List>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Lightweight
-                  </ListItem>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Allow integration with non React code
-                  </ListItem>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Data is stored in DOM
-                  </ListItem>
-                </List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Lightweight
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Allow integration with non React code
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Data is stored in DOM
+                </ListItem>
+              </List>
 
-                <ListItem textColor="tertiary" textSize={30} bold>Downsides
-                  <List>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Form data structure is not obvious
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Clunky debugging (React DevTools are not showing them)
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      No helpers for detecting field state (dirty/touched)
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      No standard components for fields
-                    </ListItem>
-                  </List>
+              <Text textSize={30} textColor="quarternary" textAlign="left">Downsides</Text>
+
+              <List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Form data structure is not obvious
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Clunky debugging (React DevTools are not showing them)
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  No helpers for detecting field state (dirty/touched)
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  No standard components for fields
                 </ListItem>
               </List>
             </Col>
@@ -219,45 +229,60 @@ export default class Presentation extends Component {
           <Heading size={6} textColor="secondary" caps>React with controlled inputs</Heading>
           <Row>
             <Col md="6">
-              <Text textSize={30} textColor="textColor" bold>Example</Text>
               <Image src={images.controlledInput} height="auto" />
             </Col>
             <Col md="6">
+              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
               <List>
-                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
-                <List>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Form structure is visible in component state
-                  </ListItem>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Easy debugging with React Devtools
-                  </ListItem>
-                </List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Form structure is visible in component state
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Easy debugging with React Devtools
+                </ListItem>
+              </List>
 
-                <ListItem textColor="tertiary" textSize={30} bold>Downsides
-                  <List>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Setting form data require handlers
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      No helpers for detecting field state (dirty/touched)
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      No standard components for fields
-                    </ListItem>
-                  </List>
+              <Text textSize={30} textColor="quarternary" textAlign="left">Downsides</Text>
+              <List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Setting form data require handlers
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  No helpers for detecting field state (dirty/touched)
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  No standard components for fields
                 </ListItem>
               </List>
             </Col>
           </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="primary" textColor="textColor">
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          notes="
+            Unfortunately these packages do not contain cute cats... rather bugs...
+            but even despite of that they are useful, so let's check few of them
+          "
+        >
+          <Heading size={6} textColor="secondary" caps>3. Form wrapper packages</Heading>
+          <Image src={images.catPackage} height="500px" />
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          textColor="textColor"
+          notes="
+            Allows setting validation per field
+            ~40k downloads in a month
+          "
+        >
           <Heading size={6} textColor="secondary" caps>React Form</Heading>
           <Row>
             <Col md="6">
-              <Text textSize={30} textColor="textColor" bold>Example</Text>
-              <Image src={''} height="auto" />
+              <Image src={images.reactForm} height="auto" />
               <Link
                 textSize={18}
                 href="https://github.com/react-tools/react-form"
@@ -266,31 +291,23 @@ export default class Presentation extends Component {
               </Link>
             </Col>
             <Col md="6">
+              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
               <List>
-                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
-                <List>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Provides abstract components for fields
-                  </ListItem>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Has support for nested fields
-                  </ListItem>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Rich API (field state, form lifecycle callbacks)
-                  </ListItem>
-                </List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Provides abstract components for fields
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Has support for nested fields
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Rich API (field state, form lifecycle callbacks)
+                </ListItem>
+              </List>
 
-                <ListItem textColor="tertiary" textSize={30} bold>Downsides
-                  <List>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Awkward syntax
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Not that popular
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    </ListItem>
-                  </List>
+              <Text textSize={30} textColor="quarternary" textAlign="left">Downsides</Text>
+              <List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Not that popular
                 </ListItem>
               </List>
             </Col>
@@ -301,8 +318,7 @@ export default class Presentation extends Component {
           <Heading size={6} textColor="secondary" caps>Redux Form</Heading>
           <Row>
             <Col md="6">
-              <Text textSize={30} textColor="textColor" bold>Example</Text>
-              <Image src={''} height="auto" />
+              <Image src={images.reduxForm} height="auto" />
               <Link
                 textSize={18}
                 href="https://github.com/erikras/redux-form"
@@ -311,31 +327,26 @@ export default class Presentation extends Component {
               </Link>
             </Col>
             <Col md="6">
+              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
               <List>
-                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
-                <List>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Widely used
-                  </ListItem>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Allow storing data between routes
-                  </ListItem>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    Good documentation with examples
-                  </ListItem>
-                </List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Widely used
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Allow storing data between routes
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Good documentation with examples
+                </ListItem>
+              </List>
 
-                <ListItem textColor="tertiary" textSize={30} bold>Downsides
-                  <List>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Performance issues
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Package size
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    </ListItem>
-                  </List>
+              <Text textSize={30} textColor="quarternary" textAlign="left">Downsides</Text>
+              <List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Performance issues
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Package size
                 </ListItem>
               </List>
             </Col>
@@ -346,7 +357,6 @@ export default class Presentation extends Component {
           <Heading size={6} textColor="secondary" caps>Formik</Heading>
           <Row>
             <Col md="6">
-              <Text textSize={30} textColor="textColor" bold>Example</Text>
               <Image src={''} height="auto" />
               <Link
                 textSize={18}
@@ -356,36 +366,41 @@ export default class Presentation extends Component {
               </Link>
             </Col>
             <Col md="6">
+              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
               <List>
-                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
-                <List>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                  </ListItem>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                  </ListItem>
-                </List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                </ListItem>
+              </List>
 
-                <ListItem textColor="tertiary" textSize={30} bold>Downsides
-                  <List>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Handles only flat forms
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    </ListItem>
-                  </List>
+              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
+              <List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Handles only flat forms
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
                 </ListItem>
               </List>
             </Col>
           </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="primary" textColor="textColor">
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          textColor="textColor"
+          notes="
+            raising star from the creator of Redux Form
+            very lightweight and performant in comparison to the Redux Form
+
+          "
+        >
           <Heading size={6} textColor="secondary" caps>React Final Form</Heading>
           <Row>
             <Col md="6">
-              <Text textSize={30} textColor="textColor" bold>Example</Text>
               <Image src={''} height="auto" />
               <Link
                 textSize={18}
@@ -395,27 +410,27 @@ export default class Presentation extends Component {
               </Link>
             </Col>
             <Col md="6">
+              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
               <List>
-                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
-                <List>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    No dependencies
-                  </ListItem>
-                  <ListItem textColor="tertiary" textSize={20} bold={false}>
-                  </ListItem>
-                </List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  No dependencies
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Lightweight
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Feature rich with good docs and examples
+                </ListItem>
+              </List>
 
-                <ListItem textColor="tertiary" textSize={30} bold>Downsides
-                  <List>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Not enough traction yet
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                      Feature rich with good docs and examples
-                    </ListItem>
-                    <ListItem textColor="tertiary" textSize={20} bold={false}>
-                    </ListItem>
-                  </List>
+              <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
+              <List>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Not enough traction yet
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
                 </ListItem>
               </List>
             </Col>

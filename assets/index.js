@@ -7,6 +7,9 @@ import search from './search.gif';
 import independent from './independent.png';
 import uncontrolledInput from './uncontrolled_input.png';
 import controlledInput from './controlled.png';
+import catPackage from './catPackage.png';
+import reactForm from './reactForm.png';
+import reduxForm from './reduxForm.png';
 
 export {
   fieldMetadata,
@@ -18,4 +21,7 @@ export {
   independent,
   uncontrolledInput,
   controlledInput,
+  catPackage,
+  reactForm,
+  reduxForm,
 };
