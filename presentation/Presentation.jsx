@@ -9,21 +9,18 @@ import {
   Slide,
   Text,
   Image,
-  Link
+  Link,
 } from 'spectacle';
 
-import formImage from '../assets/emoji_registration.png';
-import uncontrolledInputImage from '../assets/uncontrolled_input.png';
+import * as images from '../assets';
 
 const theme = createTheme({
-  textColor: '#595959',
-  primary: '#ecf0f1',
-  secondary: '#595959',
-  tertiary: '#595959',
-  quarternary: '#595959',
-  bgColor: '#ecf0f1',
+  primary: '#e8e8e8',
+  secondary: '#00add0',
+  tertiary: '#ee5c1a',
+  quarternary: '#5b6266',
 }, {
-  primary: 'Montserrat',
+  primary: 'Mentone',
   secondary: 'Helvetica',
 });
 /*
@@ -51,31 +48,48 @@ export default class Presentation extends Component {
   render() {
     return (
       <Deck transition={['slide']} transitionDuration={500} theme={theme} progress="number">
-        <Slide transition={['slide']} bgColor="bgColor">
-          <Heading size={3} caps lineHeight={1} textColor="textColor">
+        <Slide transition={['slide']} bgColor="primary">
+          <Heading size={3} textColor="secondary" caps lineHeight={1}>
             Creating forms <br />in React
           </Heading>
           <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={20}>
-            Arkadiusz Machalica web-developer @ selleo
+            Arkadiusz Machalica web-developer @ Selleo
             <br />
             <Link href="https://www.linkedin.com/in/arkadiusz-machalica">linkedin.com/in/arkadiusz-machalica</Link>
           </Text>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="bgColor" notes="Example form">
-          <Heading size={6} textColor="textColor" caps>Agenda</Heading>
+        <Slide transition={['slide']} bgColor="primary" notes="Example form">
+          <Heading size={6} textColor="secondary" caps>Agenda</Heading>
           <Row>
             <Col md="6">
-              <Image src={formImage} height="540px" />
+              <Text textSize={30} textColor="quarternary" textAlign="left">1. Challenges</Text>
+              <List>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Form data and field state
+                  management</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Field and submit validations</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Dynamic fields</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Related fields</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Async select (search)</ListItem>
+              </List>
+              <Text textSize={30} textColor="quarternary" textAlign="left">2. Solutions without dependencies</Text>
+              <List>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Uncontrolled inputs</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Controlled inputs</ListItem>
+              </List>
             </Col>
             <Col md="6">
+              <Text textSize={30} textColor="quarternary" textAlign="left">3. Form wrapper packages</Text>
               <List>
-                <ListItem textSize={30} bold>Uncontrolled inputs</ListItem>
-                <ListItem textSize={30} bold>Controlled inputs</ListItem>
-                <ListItem textSize={30} bold>React Form</ListItem>
-                <ListItem textSize={30} bold>Redux Form</ListItem>
-                <ListItem textSize={30} bold>Formik</ListItem>
-                <ListItem textSize={30} bold>React Final Form</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>React Form</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Redux Form</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Formik</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>React Final Form</ListItem>
+              </List>
+              <Text textSize={30} textColor="quarternary" textAlign="left">4. Supporting packages</Text>
+              <List>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>React Typeahead</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Yup.js</ListItem>
               </List>
             </Col>
           </Row>
@@ -83,7 +97,51 @@ export default class Presentation extends Component {
 
         <Slide
           transition={['slide']}
-          bgColor="bgColor"
+          bgColor="primary"
+          notes=""
+        >
+          <Heading size={6} textColor="secondary" caps>Form data and field state management</Heading>
+          <Row>
+            <Col md="6">
+              <Text textSize={30} textColor="quarternary">Form data</Text>
+              <Image src={images.formData} />
+            </Col>
+            <Col md="6">
+              <Text textSize={30} textColor="quarternary">Field state</Text>
+              <Image src={images.fieldMetadata} />
+            </Col>
+          </Row>
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          notes=""
+        >
+          <Heading size={6} textColor="secondary" caps>Field and submit validations</Heading>
+          <Row>
+            <Col md="6">
+              <Image src={images.submitValidations} />
+            </Col>
+            <Col md="6">
+              <Image src={images.fieldValidation} />
+
+            </Col>
+          </Row>
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          notes=""
+        >
+          <Heading size={6} textColor="secondary" caps>Dynamic fields</Heading>
+          <Image src={images.dynamicFields} />
+        </Slide>
+
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
           notes="
             Uncontrolled inputs hold form data only in DOM elements values.
             You have to get them from form element, or from each specific field.
@@ -91,7 +149,7 @@ export default class Presentation extends Component {
             For debugging you have to use form.elements in console
           "
         >
-          <Heading size={6} textColor="textColor" caps>React with uncontrolled inputs</Heading>
+          <Heading size={6} textColor="secondary" caps>React with uncontrolled inputs</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
@@ -111,31 +169,31 @@ export default class Presentation extends Component {
             </Col>
             <Col md="6">
               <List>
-                <ListItem textSize={30} bold>Upsides</ListItem>
+                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
                 <List>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Lightweight
                   </ListItem>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Allow integration with non React code
                   </ListItem>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Data is stored in DOM
                   </ListItem>
                 </List>
 
-                <ListItem textSize={30} bold>Downsides
+                <ListItem textColor="tertiary" textSize={30} bold>Downsides
                   <List>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Form data structure is not obvious
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Clunky debugging (React DevTools are not showing them)
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       No helpers for detecting field state (dirty/touched)
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       No standard components for fields
                     </ListItem>
                   </List>
@@ -145,8 +203,8 @@ export default class Presentation extends Component {
           </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
-          <Heading size={6} textColor="textColor" caps>React with controlled inputs</Heading>
+        <Slide transition={['slide']} bgColor="primary" textColor="textColor">
+          <Heading size={6} textColor="secondary" caps>React with controlled inputs</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
@@ -154,25 +212,25 @@ export default class Presentation extends Component {
             </Col>
             <Col md="6">
               <List>
-                <ListItem textSize={30} bold>Upsides</ListItem>
+                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
                 <List>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Form structure is visible in component state
                   </ListItem>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Easy debugging with React Devtools
                   </ListItem>
                 </List>
 
-                <ListItem textSize={30} bold>Downsides
+                <ListItem textColor="tertiary" textSize={30} bold>Downsides
                   <List>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Setting form data require handlers
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       No helpers for detecting field state (dirty/touched)
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       No standard components for fields
                     </ListItem>
                   </List>
@@ -182,8 +240,8 @@ export default class Presentation extends Component {
           </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
-          <Heading size={6} textColor="textColor" caps>React Form</Heading>
+        <Slide transition={['slide']} bgColor="primary" textColor="textColor">
+          <Heading size={6} textColor="secondary" caps>React Form</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
@@ -197,28 +255,28 @@ export default class Presentation extends Component {
             </Col>
             <Col md="6">
               <List>
-                <ListItem textSize={30} bold>Upsides</ListItem>
+                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
                 <List>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Provides abstract components for fields
                   </ListItem>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Has support for nested fields
                   </ListItem>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Rich API (field state, form lifecycle callbacks)
                   </ListItem>
                 </List>
 
-                <ListItem textSize={30} bold>Downsides
+                <ListItem textColor="tertiary" textSize={30} bold>Downsides
                   <List>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Awkward syntax
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Not that popular
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                     </ListItem>
                   </List>
                 </ListItem>
@@ -227,8 +285,8 @@ export default class Presentation extends Component {
           </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
-          <Heading size={6} textColor="textColor" caps>Redux Form</Heading>
+        <Slide transition={['slide']} bgColor="primary" textColor="textColor">
+          <Heading size={6} textColor="secondary" caps>Redux Form</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
@@ -242,28 +300,28 @@ export default class Presentation extends Component {
             </Col>
             <Col md="6">
               <List>
-                <ListItem textSize={30} bold>Upsides</ListItem>
+                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
                 <List>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Widely used
                   </ListItem>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Allow storing data between routes
                   </ListItem>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     Good documentation with examples
                   </ListItem>
                 </List>
 
-                <ListItem textSize={30} bold>Downsides
+                <ListItem textColor="tertiary" textSize={30} bold>Downsides
                   <List>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Performance issues
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Package size
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                     </ListItem>
                   </List>
                 </ListItem>
@@ -272,8 +330,8 @@ export default class Presentation extends Component {
           </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
-          <Heading size={6} textColor="textColor" caps>Formik</Heading>
+        <Slide transition={['slide']} bgColor="primary" textColor="textColor">
+          <Heading size={6} textColor="secondary" caps>Formik</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
@@ -287,22 +345,22 @@ export default class Presentation extends Component {
             </Col>
             <Col md="6">
               <List>
-                <ListItem textSize={30} bold>Upsides</ListItem>
+                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
                 <List>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                   </ListItem>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                   </ListItem>
                 </List>
 
-                <ListItem textSize={30} bold>Downsides
+                <ListItem textColor="tertiary" textSize={30} bold>Downsides
                   <List>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Handles only flat forms
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                     </ListItem>
                   </List>
                 </ListItem>
@@ -311,8 +369,8 @@ export default class Presentation extends Component {
           </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="bgColor" textColor="textColor">
-          <Heading size={6} textColor="textColor" caps>React Final Form</Heading>
+        <Slide transition={['slide']} bgColor="primary" textColor="textColor">
+          <Heading size={6} textColor="secondary" caps>React Final Form</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="textColor" bold>Example</Text>
@@ -326,24 +384,24 @@ export default class Presentation extends Component {
             </Col>
             <Col md="6">
               <List>
-                <ListItem textSize={30} bold>Upsides</ListItem>
+                <ListItem textColor="tertiary" textSize={30} bold>Upsides</ListItem>
                 <List>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                     No dependencies
                   </ListItem>
-                  <ListItem textSize={20} bold={false}>
+                  <ListItem textColor="tertiary" textSize={20} bold={false}>
                   </ListItem>
                 </List>
 
-                <ListItem textSize={30} bold>Downsides
+                <ListItem textColor="tertiary" textSize={30} bold>Downsides
                   <List>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Not enough traction yet
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                       Feature rich with good docs and examples
                     </ListItem>
-                    <ListItem textSize={20} bold={false}>
+                    <ListItem textColor="tertiary" textSize={20} bold={false}>
                     </ListItem>
                   </List>
                 </ListItem>
