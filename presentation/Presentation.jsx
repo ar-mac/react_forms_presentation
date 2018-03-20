@@ -12,6 +12,7 @@ import {
   Link,
 } from 'spectacle';
 
+import './styles.css';
 import * as images from '../assets';
 
 const theme = createTheme({
@@ -36,7 +37,7 @@ export default class Presentation extends Component {
             I am Arkadiusz Machalica webdev at Selleo
           "
         >
-          <Heading margin="0 0 40px" fit size={3} textColor="secondary" caps lineHeight={1}>
+          <Heading margin="0 0 40px" size={3} textColor="secondary" caps lineHeight={1}>
             Creating forms <br />in React
           </Heading>
           <br />
