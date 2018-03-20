@@ -36,10 +36,12 @@ export default class Presentation extends Component {
             I am Arkadiusz Machalica webdev at Selleo
           "
         >
-          <Heading size={3} textColor="secondary" caps lineHeight={1}>
+          <Heading margin="0 0 40px" fit size={3} textColor="secondary" caps lineHeight={1}>
             Creating forms <br />in React
           </Heading>
-          <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={26}>
+          <br />
+          <br />
+          <Text margin="10px 0 0" textColor="quarternary" lineHeight={1} textSize={26} textAlign="right">
             Arkadiusz Machalica web-developer @ Selleo
             <br />
             <Link href="https://www.linkedin.com/in/arkadiusz-machalica">linkedin.com/in/arkadiusz-machalica</Link>
@@ -51,9 +53,9 @@ export default class Presentation extends Component {
           bgColor="primary"
           notes="and the reality is not that simple. Quite the opposite."
         >
-          <Heading size={6} textColor="secondary" caps>Agenda</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>Agenda</Heading>
           <Row>
-            <Col md="6">
+            <Col md="7">
               <Text textSize={30} textColor="quarternary" textAlign="left">1. Challenges</Text>
               <List>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>
@@ -69,12 +71,11 @@ export default class Presentation extends Component {
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Controlled inputs</ListItem>
               </List>
             </Col>
-            <Col md="6">
-              <Text textSize={30} textColor="quarternary" textAlign="left">3. Form wrapper packages</Text>
+            <Col md="5">
+              <Text textSize={30} textColor="quarternary" textAlign="left">3. Form packages</Text>
               <List>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>React Form</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Redux Form</ListItem>
-                <ListItem textColor="tertiary" textSize={24} bold={false}>Formik</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>React Final Form</ListItem>
               </List>
               <Text textSize={30} textColor="quarternary" textAlign="left">4. Supporting packages</Text>
@@ -91,7 +92,7 @@ export default class Presentation extends Component {
           bgColor="primary"
           notes=""
         >
-          <Heading size={6} textColor="secondary" caps>Form data and field state management</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>Form data and field state management</Heading>
           <Row>
             <Col md="6">
               <Text textSize={30} textColor="quarternary">Form data</Text>
@@ -109,7 +110,7 @@ export default class Presentation extends Component {
           bgColor="primary"
           notes=""
         >
-          <Heading size={6} textColor="secondary" caps>Field and submit validations</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>Field and submit validations</Heading>
           <Row>
             <Col md="6">
               <Image src={images.submitValidations} />
@@ -125,7 +126,7 @@ export default class Presentation extends Component {
           bgColor="primary"
           notes=""
         >
-          <Heading size={6} textColor="secondary" caps>Dynamic fields</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>Dynamic fields</Heading>
           <Image src={images.dynamicFields} />
         </Slide>
 
@@ -134,7 +135,7 @@ export default class Presentation extends Component {
           bgColor="primary"
           notes=""
         >
-          <Heading size={6} textColor="secondary" caps>Async select (search)</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>Async select (search)</Heading>
           <Image src={images.search} />
           <Link
             textSize={18}
@@ -149,7 +150,7 @@ export default class Presentation extends Component {
           bgColor="primary"
           notes=""
         >
-          <Heading size={6} textColor="secondary" caps>2. Solutions without dependencies</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>2. Solutions without dependencies</Heading>
           <Image src={images.independent} height="500px" />
         </Slide>
 
@@ -158,7 +159,7 @@ export default class Presentation extends Component {
           bgColor="primary"
           notes=""
         >
-          <Heading size={6} textColor="secondary" caps>React with uncontrolled inputs</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>React with uncontrolled inputs</Heading>
           <Row>
             <Col md="6">
               <Image src={images.uncontrolledInput} height="auto" />
@@ -184,10 +185,10 @@ export default class Presentation extends Component {
                   Form data structure is not obvious
                 </ListItem>
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
-                  Clunky debugging (React DevTools are not showing them)
+                  Clunky debugging
                 </ListItem>
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
-                  No helpers for detecting field state (dirty/touched)
+                  No helpers for detecting field state
                 </ListItem>
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
                   No standard components for fields
@@ -195,23 +196,23 @@ export default class Presentation extends Component {
               </List>
             </Col>
           </Row>
-          <Link
-            textSize={18}
-            href="https://css-tricks.com/react-forms-using-refs"
-          >
-            css-tricks.com/react-forms-using-refs
-          </Link>
-          <br />
-          <Link
-            textSize={18}
-            href="https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f"
-          >
-            medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
-          </Link>
+          <Text textSize={18} margin="20px 0 0">
+            <Link
+              href="https://css-tricks.com/react-forms-using-refs"
+            >
+              css-tricks.com/react-forms-using-refs
+            </Link>
+            <br />
+            <Link
+              href="https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f"
+            >
+              medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
+            </Link>
+          </Text>
         </Slide>
 
         <Slide transition={['slide']} bgColor="primary" textColor="textColor">
-          <Heading size={6} textColor="secondary" caps>React with controlled inputs</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>React with controlled inputs</Heading>
           <Row>
             <Col md="6">
               <Image src={images.controlledInput} height="auto" />
@@ -233,7 +234,7 @@ export default class Presentation extends Component {
                   Setting form data require handlers
                 </ListItem>
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
-                  No helpers for detecting field state (dirty/touched)
+                  No helpers for detecting field state
                 </ListItem>
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
                   No standard components for fields
@@ -251,7 +252,7 @@ export default class Presentation extends Component {
             but even despite of that they are useful, so let's check few of them
           "
         >
-          <Heading size={6} textColor="secondary" caps>3. Form wrapper packages</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>3. Form packages</Heading>
           <Image src={images.catPackage} height="500px" />
         </Slide>
 
@@ -264,7 +265,7 @@ export default class Presentation extends Component {
             ~40k downloads in a month
           "
         >
-          <Heading size={6} textColor="secondary" caps>React Form</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>React Form</Heading>
           <Row>
             <Col md="6">
               <Image src={images.reactForm} height="auto" />
@@ -300,7 +301,7 @@ export default class Presentation extends Component {
         </Slide>
 
         <Slide transition={['slide']} bgColor="primary" textColor="textColor">
-          <Heading size={6} textColor="secondary" caps>Redux Form</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>Redux Form</Heading>
           <Row>
             <Col md="6">
               <Image src={images.reduxForm} height="auto" />
@@ -383,7 +384,7 @@ export default class Presentation extends Component {
 
           "
         >
-          <Heading size={6} textColor="secondary" caps>React Final Form</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>React Final Form</Heading>
           <Row>
             <Col md="6">
               <Image src={images.finalForm} height="auto" />
@@ -406,6 +407,9 @@ export default class Presentation extends Component {
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
                   Feature rich with good docs and examples
                 </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Compatible with redux-form
+                </ListItem>
               </List>
 
               <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
@@ -425,7 +429,7 @@ export default class Presentation extends Component {
 
           "
         >
-          <Heading size={6} textColor="secondary" caps>4. Supporting Packages</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>4. Supporting Packages</Heading>
           <Image src={images.supplyDrop} height="500px" />
         </Slide>
 
@@ -437,7 +441,7 @@ export default class Presentation extends Component {
             Lots of fields with typeahead support, async, chips
           "
         >
-          <Heading size={6} textColor="secondary" caps>React Bootstrap Typeahead</Heading>
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>React Bootstrap Typeahead</Heading>
           <Image src={images.search} height="auto" />
           <Link
             textSize={18}
@@ -455,8 +459,8 @@ export default class Presentation extends Component {
             Go-to validation solution
           "
         >
-          <Heading size={6} textColor="secondary" caps>Yup.js</Heading>
-          <Image src={images.yup} height="auto" />
+          <Heading margin="0 0 40px" size={6} textColor="secondary" caps>Yup.js</Heading>
+          <Image src={images.yup} />
           <Link
             textSize={18}
             href="https://github.com/jquense/yup"
@@ -471,13 +475,15 @@ export default class Presentation extends Component {
           notes="
           "
         >
-          <Heading size={3} textColor="secondary" caps lineHeight={1}>
+          <Heading margin="0 0 40px" size={3} textColor="secondary" caps lineHeight={1}>
             Creating forms <br />in React
           </Heading>
-          <Heading size={5} textColor="tertiary" caps lineHeight={1}>
+          <Heading margin="0 0 40px" size={5} textColor="tertiary" caps lineHeight={1}>
             Thank you for your attention
           </Heading>
-          <Text margin="10px 0 0" textColor="textColor" lineHeight={1} textSize={26}>
+          <br />
+          <br />
+          <Text margin="10px 0 0" textColor="quarternary" lineHeight={1} textSize={26} textAlign="right">
             Arkadiusz Machalica web-developer @ Selleo
             <br />
             <Link href="https://www.linkedin.com/in/arkadiusz-machalica">linkedin.com/in/arkadiusz-machalica</Link>
