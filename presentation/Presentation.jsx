@@ -76,6 +76,7 @@ export default class Presentation extends Component {
               <List>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>React Form</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>Redux Form</ListItem>
+                <ListItem textColor="tertiary" textSize={24} bold={false}>Formik</ListItem>
                 <ListItem textColor="tertiary" textSize={24} bold={false}>React Final Form</ListItem>
               </List>
               <Text textSize={30} textColor="quarternary" textAlign="left">4. Supporting packages</Text>
@@ -339,31 +340,35 @@ export default class Presentation extends Component {
           </Row>
         </Slide>
 
-        <Slide transition={['slide']} bgColor="primary" textColor="textColor">
+        <Slide transition={['slide']} bgColor="primary" textColor="textColor"
+               notes="
+               by using render props it allows for clean separation of form display and logic
+
+               "
+        >
           <Heading size={6} textColor="secondary" caps>Formik</Heading>
           <Row>
             <Col md="6">
-              <Image src={''} height="auto" />
-              <Link
-                textSize={18}
-                href="https://github.com/jaredpalmer/formik"
-              >
-                github.com/jaredpalmer/formik
-              </Link>
+              <Image src={images.formik} height="auto" />
             </Col>
             <Col md="6">
               <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
               <List>
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Widely used
                 </ListItem>
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Inspired by redux-form but without redux
+                </ListItem>
+                <ListItem textColor="tertiary" textSize={20} bold={false}>
+                  Allows to separate display from logic
                 </ListItem>
               </List>
 
               <Text textSize={30} textColor="quarternary" textAlign="left">Upsides</Text>
               <List>
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
-                  Handles only flat forms
+                  Does not allow to store data between routes
                 </ListItem>
                 <ListItem textColor="tertiary" textSize={20} bold={false}>
                 </ListItem>
@@ -372,6 +377,20 @@ export default class Presentation extends Component {
               </List>
             </Col>
           </Row>
+          <Text textSize={18} margin="20px 0 0">
+            <Link
+              textSize={18}
+              href="https://github.com/jaredpalmer/formik"
+            >
+              github.com/jaredpalmer/formik
+            </Link>
+            <Link
+              textSize={18}
+              href="https://youtu.be/-tDy7ds0dag"
+            >
+              https://youtu.be/-tDy7ds0dag
+            </Link>
+          </Text>
         </Slide>
 
         <Slide

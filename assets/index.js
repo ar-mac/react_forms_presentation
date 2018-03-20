@@ -11,6 +11,7 @@ import catPackage from './catPackage.png';
 import reactForm from './reactForm.png';
 import reduxForm from './reduxForm.png';
 import finalForm from './finalForm.png';
+import formik from './formik.png';
 import supplyDrop from './supplyDrop.png';
 import yup from './yup.png';
 
@@ -27,6 +28,7 @@ export {
   catPackage,
   reactForm,
   reduxForm,
+  formik,
   finalForm,
   supplyDrop,
   yup,
